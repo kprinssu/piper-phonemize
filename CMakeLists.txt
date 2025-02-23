@@ -39,7 +39,7 @@ set_target_properties(piper_phonemize PROPERTIES
 # Look for onnxruntime files in <root>/lib
 if(NOT DEFINED ONNXRUNTIME_DIR)
     if(NOT DEFINED ONNXRUNTIME_VERSION)
-        set(ONNXRUNTIME_VERSION "1.14.1")
+        set(ONNXRUNTIME_VERSION "1.17.3")
     endif()
 
     if(WIN32)
@@ -61,7 +61,7 @@ if(NOT DEFINED ONNXRUNTIME_DIR)
     else()
         if(CMAKE_SYSTEM_PROCESSOR STREQUAL x86_64)
             # Linux x86-64
-            set(ONNXRUNTIME_PREFIX "onnxruntime-linux-x64-${ONNXRUNTIME_VERSION}")
+            set(ONNXRUNTIME_PREFIX "onnxruntime-linux-x64-rocm-${ONNXRUNTIME_VERSION}")
         elseif(CMAKE_SYSTEM_PROCESSOR STREQUAL aarch64)
             # Linux ARM 64-bit
             set(ONNXRUNTIME_PREFIX "onnxruntime-linux-aarch64-${ONNXRUNTIME_VERSION}")
